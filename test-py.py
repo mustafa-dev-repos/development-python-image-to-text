@@ -3,5 +3,5 @@ try:
 except ImportError:
     import Image
 import pytesseract
-
-print(pytesseract.image_to_string(Image.open('.png')))
+import sys
+print(pytesseract.image_to_string(Image.open(sys.argv[1])))
